@@ -49,6 +49,10 @@ table {
 
 /* End Reset */
 
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
 .wrapper {
     display: grid;
     grid-template-columns: auto 3fr;
@@ -117,7 +121,6 @@ table {
 }
 
 .greetbar {
-    /* background-color: red; */
     display: grid;
     grid-template-columns: min-content min-content;
     align-items: center;
@@ -188,7 +191,7 @@ table {
     background-color: #e2e8f0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: min-content 1fr;
+    grid-template-rows: 50px 1fr;
     gap: 10px;
     padding-bottom: 30px;
 }
@@ -197,41 +200,169 @@ table {
     justify-self: left;
     margin-top: 20px;
     margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .cardcontainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: center;
     justify-items: center;
     gap: 20px;
 }
 
 .newsbox {
-    background-color: red;
+    background-color: #e2e8f0;
 }
 
-.card {
-    height: 150px;
-    width: 250px;
+.announcecard {
+    display: grid;
+    grid-template-columns: 1fr;
     background-color: white;
-    border-left: 6px solid orange;
+    width: 200px;
+    gap: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+}
+
+.announcement:nth-child(even) {
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.announcement {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+
+}
+
+.announcement > p {
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.announcement > h3 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.announcementswrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    gap: 10px;
+}
+
+.announcementswrapper > h2, .trendingwrapper > h2 {
+    justify-self: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.trendingcard {
+    display: grid;
+    grid-template-columns: min-content;
+    gap: 15px;
+    background-color: white;
+    width: 180px;
+    padding: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
+.usercard {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+}
+
+.usercard > img {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.username > p {
+    font-size: 12px;
+}
+
+.username p:first-child {
+    font-weight: 500;
+}
+
+.username p:nth-child(2) {
+    font-weight: 300;
+}
+
+.username {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content;
+    align-self: center;
+    margin-left: 5px;
+    gap: 5px;
+}
+
+.card {
+    height: min-content;
+    width: 250px;
+    font-size: 15px;
+    background-color: white;
+    border-left: 6px solid orange;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content 1fr;
+    gap: 15px;
+    padding: 20px;
+}
+
+.card > p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.card > h3 {
+    font-weight: bold;
+}
+
+.imagecontainer {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: min-content min-content min-content;
+    gap: 10px;
+}
+
+.imagecontainer > img {
+    height: 25px;
+}
+
 .top-icons {
     display: grid;
-    gap: 5px;
+    gap: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .bot-icons {
     display: grid;
-    gap: 5px;
+    gap: 15px;
+    margin-left: 10px;
+    margin-top: 20px;
 }
 
 .logoicon {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .logoicon > p {
@@ -242,14 +373,14 @@ table {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
     margin-left: 20px;
     margin-right: 40px;
     padding: 0px;
 }
 
 .icon > img {
-    height: 25px;
+    height: 18px;
     margin: 0px;
     padding: 0px;
 }
@@ -257,6 +388,7 @@ table {
 .icon > p {
     margin: 0px;
     padding: 0px;
+    color: white;
 }
 
 .logoicon > img {
